@@ -1,33 +1,33 @@
 //  find unique elements in an array
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
+int findUnique(vector<int> arr)
+{
 
-int findUnique(vector<int> arr){
-
-int ans= 0;
-for(int i=0; i< arr.size(); i++){
-    ans = ans ^ arr[i];
+    int ans = 0;
+    for (int i = 0; i < arr.size(); i++)
+    {
+        ans = ans ^ arr[i];
+    }
+    return ans;
 }
-return ans;
 
-}
-
-int main(){
+int main()
+{
     int n;
     cout << "Enter the size of array" << endl;
     cin >> n;
 
-
     vector<int> arr(n);
     cout << "Enter the elements" << endl;
-    for(int i=0;i<arr.size(); i++){
+    for (int i = 0; i < arr.size(); i++)
+    {
         cin >> arr[i];
     }
 
     int uniqueElement = findUnique(arr);
     cout << "Unique Element is" << uniqueElement;
-    
 }
